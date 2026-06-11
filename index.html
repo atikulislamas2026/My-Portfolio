@@ -3,143 +3,412 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Atikul Islam | Portfolio</title>
+    <title>Atik AI Academy | Md. Atikul Islam Portfolio</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#0d1117] text-white">
 
-    <div id="drawer" class="fixed top-0 right-0 h-full w-0 bg-[#0d1117] z-[100] shadow-[-10px_0_30px_rgba(0,0,0,0.5)] transition-all duration-500 overflow-hidden border-l border-gray-800">
+<body class="bg-[#f8fafc] text-[#0f172a] font-['Inter','Noto_Sans_Bengali',sans-serif]">
+
+    <!-- Drawer Menu -->
+    <div id="drawer" class="fixed top-0 right-0 h-full w-0 bg-[#0f172a] z-[100] shadow-[-10px_0_40px_rgba(0,0,0,0.35)] transition-all duration-500 overflow-hidden border-l border-slate-800">
         <div class="p-10 flex flex-col h-full">
-            <button id="close-drawer" class="text-4xl self-end text-gray-400 hover:text-cyan-400 mb-10">&times;</button>
-            <nav class="flex flex-col gap-8 text-2xl font-bold tracking-wide">
+            <button id="close-drawer" class="text-4xl self-end text-slate-300 hover:text-cyan-400 mb-10">&times;</button>
+
+            <nav class="flex flex-col gap-8 text-2xl font-bold tracking-wide text-white">
                 <a href="#" class="hover:text-cyan-400 transition duration-300" onclick="closeMenu()">Home</a>
                 <a href="#about" class="hover:text-cyan-400 transition duration-300" onclick="closeMenu()">About</a>
                 <a href="#services" class="hover:text-cyan-400 transition duration-300" onclick="closeMenu()">Services</a>
+                <a href="#portfolio" class="hover:text-cyan-400 transition duration-300" onclick="closeMenu()">Portfolio</a>
+                <a href="#reviews" class="hover:text-cyan-400 transition duration-300" onclick="closeMenu()">Reviews</a>
                 <a href="#contact" class="hover:text-cyan-400 transition duration-300" onclick="closeMenu()">Contact</a>
             </nav>
-            <div class="mt-auto border-t border-gray-800 pt-6">
-                <p class="text-sm text-gray-500 font-semibold uppercase tracking-widest">Md. Atikul Islam</p>
+
+            <div class="mt-auto border-t border-slate-700 pt-6">
+                <p class="text-sm text-cyan-400 font-semibold uppercase tracking-widest">Atik AI Academy</p>
+                <p class="text-slate-400 mt-2">Professional Website Design Service</p>
             </div>
         </div>
     </div>
 
-    <nav class="fixed top-0 w-full z-50 glass-nav">
-        <div class="max-w-6xl mx-auto flex justify-between items-center p-6">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
             <div class="flex items-center gap-3">
-                <div class="bg-cyan-500 text-black font-black px-3 py-1 rounded-lg">MA</div>
-                <span class="text-xl font-bold tracking-tight">Md. Atikul Islam</span>
+                <div class="bg-gradient-to-r from-blue-700 to-cyan-500 text-white font-black px-4 py-2 rounded-xl shadow-lg">AA</div>
+                <div>
+                    <span class="block text-xl font-black tracking-tight text-slate-900">Atik AI Academy</span>
+                    <span class="block text-xs font-semibold text-slate-500">Website Design Service</span>
+                </div>
             </div>
-            <button id="open-drawer" class="text-3xl hover:text-cyan-400 transition focus:outline-none">☰</button>
+
+            <button id="open-drawer" class="text-3xl text-slate-900 hover:text-blue-700 transition focus:outline-none">☰</button>
         </div>
     </nav>
 
-    <section class="pt-48 pb-20 px-6 max-w-5xl mx-auto text-center">
-        <div class="badge">Premium Digital Experience</div>
-        <h1 class="text-5xl md:text-7xl font-black leading-tight mb-8">
-            Modern website design for your personal brand and business.
-        </h1>
-        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            I create clean, fast, mobile-friendly websites that look professional and help visitors take action.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#contact" class="bg-cyan-500 text-black px-10 py-4 rounded-full font-bold text-center">Start Project</a>
-            <button class="bg-slate-800 border border-gray-700 px-10 py-4 rounded-full font-bold text-lg hover:bg-slate-700 transition">View Services</button>
-        </div>
-    </section>
+    <!-- Hero Section -->
+    <section class="pt-40 pb-24 px-6 bg-gradient-to-br from-[#eff6ff] via-white to-[#ecfeff]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
-    <section class="px-6 py-20 max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-            <span class="bg-cyan-900/30 text-cyan-400 px-4 py-1 rounded-lg text-sm font-bold uppercase tracking-widest">What I Do</span>
-            <h2 class="text-4xl font-bold mt-4">Complete website solution</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="card p-8 rounded-[2.5rem] border border-gray-800 hover:border-cyan-500 transition-all duration-500">
-                <div class="w-full h-64 bg-gradient-to-br from-blue-600 to-indigo-800 rounded-3xl mb-8"></div>
-                <h3 class="text-2xl font-bold mb-2">Website Growth</h3>
-                <p class="text-6xl font-black text-cyan-400 mb-4">+78%</p>
-                <p class="text-gray-400 text-lg">Better design, faster pages, stronger trust.</p>
-            </div>
-            <div class="card p-8 rounded-[2.5rem] border border-gray-800 flex flex-col justify-center">
-                <h3 class="text-3xl font-bold mb-4">Web Design</h3>
-                <p class="text-gray-400 text-xl">Premium layout, modern color, clean user experience.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="px-6 py-24 max-w-6xl mx-auto border-t border-gray-900">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="image-box h-80 bg-gray-800 rounded-3xl border border-gray-700">
-                <div class="w-full h-full flex items-center justify-center text-gray-500 italic">Your Image Here</div>
-            </div>
             <div>
-                <span class="text-cyan-400 font-bold uppercase tracking-widest text-sm">About Me</span>
-                <h2 class="text-4xl font-bold mt-4 mb-6">Building digital products with passion.</h2>
-                <p class="text-gray-400 text-lg leading-relaxed">
-                    I am Md. Atikul Islam, a specialized web designer focused on creating high-converting websites. I believe a website is the heart of a brand's digital identity.
+                <div class="inline-block bg-blue-100 text-blue-700 px-5 py-2 rounded-full text-sm font-extrabold uppercase tracking-widest mb-6">
+                    Premium Digital Experience
+                </div>
+
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-8 text-slate-950">
+                    Modern website design for your personal brand and business.
+                </h1>
+
+                <p class="text-slate-600 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+                    I create clean, fast, mobile-friendly websites that look professional and help visitors take action.
+                    Business, product, course, portfolio, doctor/clinic, hospital, pharmacy এবং e-commerce website design করা হয়।
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-gradient-to-r from-blue-700 to-cyan-500 text-white px-10 py-4 rounded-full font-bold text-center shadow-xl hover:scale-[1.03] transition">
+                        Start Project
+                    </a>
+
+                    <a href="#portfolio" class="bg-white border border-slate-200 text-slate-900 px-10 py-4 rounded-full font-bold text-center hover:bg-slate-100 transition">
+                        View Portfolio
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 mt-10 max-w-xl">
+                    <div class="bg-white rounded-2xl p-5 shadow-lg border border-slate-100 text-center">
+                        <h3 class="font-black text-blue-700 text-xl">Fast</h3>
+                        <p class="text-slate-500 text-sm font-semibold">Loading</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 shadow-lg border border-slate-100 text-center">
+                        <h3 class="font-black text-blue-700 text-xl">Mobile</h3>
+                        <p class="text-slate-500 text-sm font-semibold">Friendly</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 shadow-lg border border-slate-100 text-center">
+                        <h3 class="font-black text-blue-700 text-xl">Clean</h3>
+                        <p class="text-slate-500 text-sm font-semibold">Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="bg-white rounded-[3rem] p-6 shadow-2xl border border-slate-100 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-48 h-48 bg-cyan-300/30 rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl"></div>
+
+                    <div class="relative z-10 bg-gradient-to-br from-blue-900 to-slate-950 rounded-[2.5rem] p-6">
+                       <img src="images/profile.jpg" alt="Md. Atikul Islam" class="w-full h-[430px] object-contain rounded-[2rem] border border-white/10 bg-black">
+
+                        <div class="mt-6 bg-white/10 backdrop-blur-xl rounded-3xl p-5 border border-white/10">
+                            <h2 class="text-2xl font-black text-white">Md. Atikul Islam</h2>
+                            <p class="text-cyan-300 font-semibold mt-1">Web Designer & Digital Service Provider</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute -left-4 top-12 bg-white shadow-xl px-5 py-3 rounded-2xl font-bold text-blue-700 hidden md:block">
+                    Mobile Friendly
+                </div>
+
+                <div class="absolute -right-4 bottom-20 bg-white shadow-xl px-5 py-3 rounded-2xl font-bold text-cyan-600 hidden md:block">
+                    Business Ready
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="px-6 py-14">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-5">
+            <div class="bg-white rounded-2xl p-6 text-center font-bold text-slate-800 shadow-lg border border-slate-100">Modern Design</div>
+            <div class="bg-white rounded-2xl p-6 text-center font-bold text-slate-800 shadow-lg border border-slate-100">Mobile Friendly</div>
+            <div class="bg-white rounded-2xl p-6 text-center font-bold text-slate-800 shadow-lg border border-slate-100">Business Presentation</div>
+            <div class="bg-white rounded-2xl p-6 text-center font-bold text-slate-800 shadow-lg border border-slate-100">WhatsApp Integration</div>
+        </div>
+    </section>
+
+    <!-- What I Do -->
+    <section class="px-6 py-20 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="bg-blue-100 text-blue-700 px-5 py-2 rounded-full text-sm font-black uppercase tracking-widest">What I Do</span>
+            <h2 class="text-4xl md:text-5xl font-black mt-5 text-slate-950">Complete website solution</h2>
+            <p class="text-slate-600 mt-5 max-w-2xl mx-auto text-lg leading-relaxed">
+                আপনার business বা personal brand-কে online-এ professionalভাবে উপস্থাপন করার জন্য clean, smart ও conversion-focused website design.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-xl hover:shadow-2xl transition-all duration-500">
+                <div class="w-full h-64 bg-gradient-to-br from-blue-700 to-cyan-500 rounded-3xl mb-8 flex items-center justify-center">
+                    <div class="bg-white/20 backdrop-blur-xl rounded-2xl p-6 w-[80%]">
+                        <div class="h-4 bg-white/70 rounded-full mb-4"></div>
+                        <div class="h-4 bg-white/40 rounded-full mb-4 w-[70%]"></div>
+                        <div class="h-4 bg-white/30 rounded-full w-[50%]"></div>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-black mb-2 text-slate-900">Website Growth</h3>
+                <p class="text-6xl font-black text-blue-700 mb-4">+78%</p>
+                <p class="text-slate-600 text-lg">Better design, faster pages, stronger trust and professional presentation.</p>
+            </div>
+
+            <div class="bg-[#0f172a] p-8 rounded-[2.5rem] border border-slate-800 flex flex-col justify-center shadow-xl">
+                <h3 class="text-3xl font-black mb-4 text-white">Smart Web Design</h3>
+                <p class="text-slate-300 text-xl leading-relaxed">
+                    Premium layout, modern color, clean user experience and professional business-ready website design.
+                </p>
+
+                <div class="grid grid-cols-2 gap-4 mt-8">
+                    <div class="bg-white/10 text-white p-4 rounded-2xl font-bold">Landing Page</div>
+                    <div class="bg-white/10 text-white p-4 rounded-2xl font-bold">Business Website</div>
+                    <div class="bg-white/10 text-white p-4 rounded-2xl font-bold">Course Website</div>
+                    <div class="bg-white/10 text-white p-4 rounded-2xl font-bold">E-commerce</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="px-6 py-24 max-w-7xl mx-auto border-t border-slate-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="bg-white rounded-[3rem] p-5 shadow-2xl border border-slate-100">
+                <img src="images/profile.jpg" alt="Md. Atikul Islam" class="w-full h-[430px] object-cover rounded-[2.5rem]">
+            </div>
+
+            <div>
+                <span class="text-blue-700 font-black uppercase tracking-widest text-sm">About Me</span>
+
+                <h2 class="text-4xl md:text-5xl font-black mt-4 mb-6 text-slate-950">
+                    Building digital products with passion.
+                </h2>
+
+                <p class="text-slate-600 text-lg leading-relaxed mb-5">
+                    I am Md. Atikul Islam, a specialized web designer focused on creating high-converting websites.
+                    I believe a website is the heart of a brand's digital identity.
+                </p>
+
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    আমার লক্ষ্য হলো প্রতিটি website এমনভাবে তৈরি করা, যেন customer সহজে আপনার service, product, contact information এবং business details দেখতে পারে।
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="services" class="px-6 py-24 max-w-6xl mx-auto border-t border-gray-900">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold">My Specialized Services</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="card p-8 rounded-2xl border border-gray-800 hover:bg-cyan-900/10 transition">
-                <h4 class="text-xl font-bold mb-3 text-cyan-400">UI/UX Design</h4>
-                <p class="text-gray-400">Modern and clean layouts designed for user experience.</p>
+    <!-- Services -->
+    <section id="services" class="px-6 py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-14">
+                <span class="text-blue-700 font-black uppercase tracking-widest text-sm">Services</span>
+                <h2 class="text-4xl md:text-5xl font-black mt-4 text-slate-950">My Specialized Services</h2>
+                <p class="text-slate-600 mt-5 max-w-2xl mx-auto text-lg">
+                    যেকোনো business বা service-এর জন্য professional website design solution.
+                </p>
             </div>
-            <div class="card p-8 rounded-2xl border border-gray-800 hover:bg-cyan-900/10 transition">
-                <h4 class="text-xl font-bold mb-3 text-cyan-400">Web Development</h4>
-                <p class="text-gray-400">Fast, secure, and SEO-friendly coding implementation.</p>
-            </div>
-            <div class="card p-8 rounded-2xl border border-gray-800 hover:bg-cyan-900/10 transition">
-                <h4 class="text-xl font-bold mb-3 text-cyan-400">Digital Growth</h4>
-                <p class="text-gray-400">Strategies to help your brand reach more customers online.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-500 hover:shadow-xl transition">
+                    <h4 class="text-xl font-black mb-3 text-blue-700">Professional Landing Page</h4>
+                    <p class="text-slate-600 leading-relaxed">Business promotion এবং lead generation-এর জন্য attractive landing page.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-500 hover:shadow-xl transition">
+                    <h4 class="text-xl font-black mb-3 text-blue-700">Business Website</h4>
+                    <p class="text-slate-600 leading-relaxed">Company, small business, service provider এবং personal brand-এর জন্য website.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-500 hover:shadow-xl transition">
+                    <h4 class="text-xl font-black mb-3 text-blue-700">Product Showcase Website</h4>
+                    <p class="text-slate-600 leading-relaxed">Product list, details, offer এবং WhatsApp order-focused website.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-500 hover:shadow-xl transition">
+                    <h4 class="text-xl font-black mb-3 text-blue-700">Course / Academy Website</h4>
+                    <p class="text-slate-600 leading-relaxed">Course details, student registration এবং academy presentation website.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-500 hover:shadow-xl transition">
+                    <h4 class="text-xl font-black mb-3 text-blue-700">Portfolio Website</h4>
+                    <p class="text-slate-600 leading-relaxed">Freelancer, teacher, designer, consultant এবং personal profile website.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-500 hover:shadow-xl transition">
+                    <h4 class="text-xl font-black mb-3 text-blue-700">Booking / Appointment Website</h4>
+                    <p class="text-slate-600 leading-relaxed">Doctor, clinic, salon, consultant এবং service provider booking system.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-500 hover:shadow-xl transition">
+                    <h4 class="text-xl font-black mb-3 text-blue-700">Doctor / Clinic Website</h4>
+                    <p class="text-slate-600 leading-relaxed">Doctor profile, clinic service, appointment এবং contact-focused website.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-500 hover:shadow-xl transition">
+                    <h4 class="text-xl font-black mb-3 text-blue-700">Hospital / Pharmacy Website</h4>
+                    <p class="text-slate-600 leading-relaxed">Hospital, diagnostic center, pharmacy এবং medical service website.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-500 hover:shadow-xl transition">
+                    <h4 class="text-xl font-black mb-3 text-blue-700">E-commerce Website</h4>
+                    <p class="text-slate-600 leading-relaxed">Online shop, product selling এবং customer order-focused website solution.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="px-6 py-24 max-w-4xl mx-auto border-t border-gray-900">
-        <div class="text-center mb-12">
-            <span class="text-cyan-400 font-bold uppercase tracking-widest text-sm">Contact Me</span>
-            <h2 class="text-4xl font-bold mt-4">Let's start your project</h2>
-            <p class="text-gray-400 mt-4">নিচের ফর্মে আপনার তথ্য লিখুন, আমি আপনার সাথে যোগাযোগ করব।</p>
+    <!-- Portfolio -->
+    <section id="portfolio" class="px-6 py-24 max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+            <span class="text-blue-700 font-black uppercase tracking-widest text-sm">Portfolio</span>
+            <h2 class="text-4xl md:text-5xl font-black mt-4 text-slate-950">Project Showcase</h2>
+            <p class="text-slate-600 mt-5 max-w-2xl mx-auto text-lg">
+                কিছু sample project category, যেগুলোর মাধ্যমে customer আপনার কাজের ধরন বুঝতে পারবে।
+            </p>
         </div>
-        <div class="card p-8 rounded-[2rem] border border-gray-800">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+            <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-100">
+                <div class="h-56 bg-gradient-to-br from-blue-700 to-cyan-500 flex items-center justify-center text-white font-black text-2xl">
+                    Course Website
+                </div>
+                <div class="p-7">
+                    <h3 class="text-2xl font-black text-slate-900 mb-3">Course / Academy Website</h3>
+                    <p class="text-slate-600 leading-relaxed">Student registration, course details, payment info এবং contact section.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-100">
+                <div class="h-56 bg-gradient-to-br from-slate-900 to-blue-700 flex items-center justify-center text-white font-black text-2xl">
+                    App Store
+                </div>
+                <div class="p-7">
+                    <h3 class="text-2xl font-black text-slate-900 mb-3">VPN / App Download Store</h3>
+                    <p class="text-slate-600 leading-relaxed">App listing, download button, product details এবং mobile-friendly layout.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-100">
+                <div class="h-56 bg-gradient-to-br from-cyan-500 to-blue-800 flex items-center justify-center text-white font-black text-2xl">
+                    Landing Page
+                </div>
+                <div class="p-7">
+                    <h3 class="text-2xl font-black text-slate-900 mb-3">Business Landing Page</h3>
+                    <p class="text-slate-600 leading-relaxed">Business intro, service details, review, WhatsApp CTA এবং contact section.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="px-6 py-24 bg-[#0f172a] text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-14">
+                <span class="text-cyan-400 font-black uppercase tracking-widest text-sm">Reviews</span>
+                <h2 class="text-4xl md:text-5xl font-black mt-4">What clients can expect</h2>
+                <p class="text-slate-400 mt-5 max-w-2xl mx-auto text-lg">
+                    Professional service, clean design এবং project অনুযায়ী proper support.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white/10 p-8 rounded-3xl border border-white/10">
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        “Website design clean, professional and easy to understand. Business presentation looks much better.”
+                    </p>
+                    <h4 class="font-black text-white">Business Client</h4>
+                    <span class="text-cyan-400 text-sm font-semibold">Landing Page Project</span>
+                </div>
+
+                <div class="bg-white/10 p-8 rounded-3xl border border-white/10">
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        “Mobile view খুব সুন্দর হয়েছে। Customer সহজে information এবং contact button দেখতে পারে।”
+                    </p>
+                    <h4 class="font-black text-white">Course Owner</h4>
+                    <span class="text-cyan-400 text-sm font-semibold">Academy Website</span>
+                </div>
+
+                <div class="bg-white/10 p-8 rounded-3xl border border-white/10">
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        “Product showcase layout অনেক professional. Website speed এবং design দুটোই ভালো।”
+                    </p>
+                    <h4 class="font-black text-white">Online Seller</h4>
+                    <span class="text-cyan-400 text-sm font-semibold">Product Website</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="px-6 py-24">
+        <div class="max-w-5xl mx-auto bg-gradient-to-r from-blue-700 to-cyan-500 rounded-[3rem] p-10 md:p-16 text-center text-white shadow-2xl">
+            <h2 class="text-4xl md:text-5xl font-black mb-5">
+                Ready to build your professional website?
+            </h2>
+
+            <p class="text-white/90 text-lg max-w-2xl mx-auto leading-relaxed">
+                আপনার business বা service-এর জন্য smart, modern ও mobile-friendly website করতে চাইলে এখনই যোগাযোগ করুন।
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                <a href="#contact" class="bg-white text-blue-700 px-10 py-4 rounded-full font-black text-center hover:bg-slate-100 transition">
+                    Contact Now
+                </a>
+
+                <a href="https://wa.me/8801880566448" target="_blank" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-black text-center hover:scale-[1.03] transition">
+                    WhatsApp Message
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="px-6 py-24 max-w-5xl mx-auto border-t border-slate-200">
+        <div class="text-center mb-12">
+            <span class="text-blue-700 font-black uppercase tracking-widest text-sm">Contact Me</span>
+            <h2 class="text-4xl md:text-5xl font-black mt-4 text-slate-950">Let's start your project</h2>
+            <p class="text-slate-600 mt-4 text-lg">নিচের ফর্মে আপনার তথ্য লিখুন, আমি আপনার সাথে যোগাযোগ করব।</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-2xl">
             <form action="https://formspree.io/f/xgodowbb" method="POST" class="space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-sm text-gray-400 mb-2">Your Name</label>
-                        <input type="text" name="name" required class="w-full bg-[#0d1117] border border-gray-700 rounded-xl px-4 py-3 focus:border-cyan-500 outline-none transition text-white">
+                        <label class="block text-sm text-slate-500 font-bold mb-2">Your Name</label>
+                        <input type="text" name="name" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:border-blue-600 outline-none transition text-slate-900">
                     </div>
+
                     <div>
-                        <label class="block text-sm text-gray-400 mb-2">Your Email</label>
-                        <input type="email" name="email" required class="w-full bg-[#0d1117] border border-gray-700 rounded-xl px-4 py-3 focus:border-cyan-500 outline-none transition text-white">
+                        <label class="block text-sm text-slate-500 font-bold mb-2">Your Email</label>
+                        <input type="email" name="email" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:border-blue-600 outline-none transition text-slate-900">
                     </div>
                 </div>
+
                 <div>
-                    <label class="block text-sm text-gray-400 mb-2">Subject</label>
-                    <input type="text" name="subject" class="w-full bg-[#0d1117] border border-gray-700 rounded-xl px-4 py-3 focus:border-cyan-500 outline-none transition text-white">
+                    <label class="block text-sm text-slate-500 font-bold mb-2">Subject</label>
+                    <input type="text" name="subject" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:border-blue-600 outline-none transition text-slate-900">
                 </div>
+
                 <div>
-                    <label class="block text-sm text-gray-400 mb-2">Message</label>
-                    <textarea name="message" rows="5" required class="w-full bg-[#0d1117] border border-gray-700 rounded-xl px-4 py-3 focus:border-cyan-500 outline-none transition text-white"></textarea>
+                    <label class="block text-sm text-slate-500 font-bold mb-2">Message</label>
+                    <textarea name="message" rows="5" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:border-blue-600 outline-none transition text-slate-900"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-cyan-500 text-black font-bold py-4 rounded-xl hover:bg-cyan-400 transition transform hover:scale-[1.02]">
+
+                <button type="submit" class="w-full bg-gradient-to-r from-blue-700 to-cyan-500 text-white font-black py-4 rounded-xl hover:shadow-xl transition transform hover:scale-[1.02]">
                     Send Message
                 </button>
             </form>
         </div>
     </section>
 
-    <footer class="p-12 border-t border-gray-900 text-center">
-        <h3 class="text-2xl font-bold text-white mb-2">Md. Atikul Islam</h3>
-        <p class="text-gray-500">Premium digital services for modern brands.</p>
-        <p class="text-gray-600 mt-6 text-sm">© 2026 Md. Atikul Islam. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="p-12 bg-[#0f172a] text-center">
+        <h3 class="text-2xl font-black text-white mb-2">Atik AI Academy</h3>
+        <p class="text-slate-400">Premium digital services for modern brands.</p>
+        <p class="text-slate-500 mt-6 text-sm">© 2026 Md. Atikul Islam. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

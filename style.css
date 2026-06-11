@@ -1,43 +1,53 @@
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Noto Sans Bengali', sans-serif;
     overflow-x: hidden;
+    background: #f8fafc;
+    color: #0f172a;
 }
 
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* Navbar Glass Effect */
 .glass-nav {
-    background: rgba(13, 17, 23, 0.85);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
 }
 
+/* Premium Badge */
 .badge {
     display: inline-block;
-    border: 1px solid rgba(34, 211, 238, 0.3);
-    background: rgba(8, 145, 178, 0.1);
-    color: #22d3ee;
-    padding: 6px 20px;
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    background: linear-gradient(135deg, rgba(219, 234, 254, 0.95), rgba(236, 254, 255, 0.95));
+    color: #1d4ed8;
+    padding: 8px 22px;
     border-radius: 9999px;
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 800;
     margin-bottom: 2rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
 }
 
+/* Universal Card */
 .card {
-    background-color: #161b22;
+    background: #ffffff;
+    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.10);
 }
 
-/* ড্রয়ার ওপেন হওয়ার এনিমেশন */
-#drawer.active {
-    width: 320px;
-}
-
-@media (max-width: 640px) {
-    #drawer.active {
-        width: 100%;
-    }
-}
-
-
-/* ড্রয়ার ডিফল্ট ভাবে লুকিয়ে থাকবে */
+/* Drawer Default Hidden */
 #drawer {
     width: 0;
     position: fixed;
@@ -45,24 +55,98 @@ body {
     right: 0;
     height: 100%;
     z-index: 100;
-    transition: 0.5s; /* এটি স্লাইড এনিমেশন তৈরি করবে */
+    transition: 0.5s ease;
 }
 
-/* যখন জাভাস্ক্রিপ্ট 'active' ক্লাস যোগ করবে তখন ড্রয়ারটি দেখা যাবে */
+/* Drawer Active */
 #drawer.active {
-    width: 320px; /* ডেস্কটপ বা বড় স্ক্রিনে উইডথ */
+    width: 320px;
 }
 
-/* মোবাইল ফোনের জন্য ড্রয়ারের উইডথ */
+/* Mobile Drawer */
 @media (max-width: 640px) {
     #drawer.active {
-        width: 85%; /* ছোট ফোনে স্ক্রিনের ৮৫% জায়গা নিবে */
+        width: 85%;
     }
 }
 
-/* ব্যাকগ্রাউন্ড কালার এবং গ্লাস ইফেক্ট */
-.glass-nav {
-    background: rgba(13, 17, 23, 0.85);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+/* Hero Image Polish */
+img {
+    max-width: 100%;
+}
+
+/* Profile Image Box */
+.image-box {
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e3a8a, #06b6d4);
+    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.18);
+}
+
+/* Button Smoothness */
+a,
+button {
+    transition: all 0.3s ease;
+}
+
+/* Input Focus Smooth */
+input,
+textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* Premium Hover Card */
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* Service Card Text */
+.card h4,
+.card h3 {
+    letter-spacing: -0.02em;
+}
+
+/* Better Mobile Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.6rem !important;
+        line-height: 1.12 !important;
+    }
+
+    h2 {
+        font-size: 2.1rem !important;
+        line-height: 1.18 !important;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 7px 16px;
+    }
+}
+
+/* Footer Polish */
+footer {
+    letter-spacing: -0.01em;
+}
+
+/* Scrollbar Design */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #2563eb, #06b6d4);
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #1d4ed8, #0891b2);
 }
